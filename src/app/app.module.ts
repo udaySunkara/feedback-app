@@ -12,9 +12,10 @@ import { FeedbackSubmitStatusComponent } from './feedback-submit-status/feedback
 
 const appRoutes: Routes = [
   { path: 'feedback/:assetId', component: FeedbackWrapperComponent },
+  { path: 'feedback/1', component: FeedbackWrapperComponent },
   { path: 'feedback-status', component: FeedbackSubmitStatusComponent },
   { path: '',
-    redirectTo: '/feedback',
+    redirectTo: '/feedback/1',
     pathMatch: 'full'
   },
   { path: '**', component: FeedbackFormComponent }
