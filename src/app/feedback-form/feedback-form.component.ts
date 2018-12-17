@@ -57,15 +57,14 @@ export class FeedbackFormComponent implements OnInit, OnDestroy {
   }
 
   createTicket() {
-    // const payload = {
-    //   description: 'Ticket created from risk vision.',
-    //   group: 'IT OPS VC3 GLOBAL',
-    //   priority: 'P4',
-    //   service: 'Risk Vision',
-    //   caller_id: 'jprateek',
-    //   due_date: '2019-05-02T06:26:49Z'
-    // };
-    const payload = {};
+    const payload = {
+      description: 'Ticket created from risk vision.',
+      group: 'IT OPS VC3 GLOBAL',
+      priority: 'P4',
+      service: 'Risk Vision',
+      caller_id: 'jprateek',
+      due_date: '2019-05-02T06:26:49Z'
+    };
     this.showLoader = true;
     this.http.post(environment.endPoints.setAssetInfo, payload).pipe(
       takeUntil(this.$destroy)
