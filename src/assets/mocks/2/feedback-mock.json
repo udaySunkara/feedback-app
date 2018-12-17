@@ -1,0 +1,29 @@
+{
+  "assetID": "2",
+  "assetType": "COFFEE-MACHINE",
+  "location": {
+    "buildingDesc": "CreekSide C",
+    "floor": 2
+  },
+  "assetIssues": [{
+    "id": 4,
+    "assetCode": "COFFEE-MACHINE",
+    "issueCode": "1",
+    "issueDescription": "No hot water"
+  }, {
+    "id": 7,
+    "assetCode": "COFFEE-MACHINE",
+    "issueCode": "2",
+    "issueDescription": "Steamer issue"
+  }, {
+    "id": 10,
+    "assetCode": "COFFEE-MACHINE",
+    "issueCode": "3",
+    "issueDescription": "Needs cleaning"
+  }, {
+    "id": 13,
+    "assetCode": "COFFEE-MACHINE",
+    "issueCode": "4",
+    "issueDescription": "No power"
+  }]
+}

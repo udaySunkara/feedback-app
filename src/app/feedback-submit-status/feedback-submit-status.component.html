@@ -1,0 +1,13 @@
+
+    <div class="alert alert-success" role="alert">
+        <div class="alert-items">
+            <div class="alert-item static">
+                <div class="alert-icon-wrapper">
+                    <clr-icon class="alert-icon" shape="check-circle"></clr-icon>
+                </div>
+                <span class="alert-text">
+                    {{ticketDetails.message}}<span *ngIf="ticketDetails.id">{{' (Ticket # ' + ticketDetails.id + ')'}}</span>
+                </span>
+            </div>
+        </div>
+    </div>

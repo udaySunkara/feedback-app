@@ -1,0 +1,60 @@
+
+      <div class="asset-info clr-row" *ngIf="feedbackData">
+        <!-- <div class="clr-col-sm-3 clr-col-6" *ngIf="feedbackData[assetId].assetDetails.assetType?.toLowerCase() === 'printer'; else lblAssetType">
+          <clr-icon shape="printer"></clr-icon>
+        </div>
+        <ng-template #lblAssetType> -->
+          <div class="clr-col-sm-4 clr-col-8">
+            <span class="title">Asset Type: </span>{{feedbackData.assetType}}
+          </div>
+        <!-- </ng-template> -->
+        <div class="clr-col-sm-2 clr-col-4">
+          <span class="title">Asset ID: </span>{{feedbackData.assetID}}
+        </div>
+        <div class="clr-col-sm-4 clr-col-8">
+          <span class="title">Building: </span>{{feedbackData.location.buildingDesc}}
+        </div>
+        <div class="clr-col-sm-2 clr-col-4">
+          <span class="title">Floor: </span>{{feedbackData.location.floor}}
+        </div>
+      </div>
+
+      <div class="feedback-body clr-row" *ngIf="feedbackData">
+        <div class="question-text">
+          <span class="q-text">{{feedbackData.questionText || (questionText + feedbackData.assetType +'?')}}</span>
+        </div>
+        <div class="options-container clr-row">
+          <div class="support-text clr-col-sm-12">{{feedbackData.supportText || supportText}}</div>
+          <div class="option clr-col-5 clr-col-md-5" [ngClass]="{'selected': option.isSelected}" (click)="selectOption(option)" *ngFor="let option of feedbackData.assetIssues">
+            {{option.issueDescription}}
+          </div>
+        </div>
+        <div class="upload-container">
+          <div class="heading">
+            Upload Image
+          </div>
+          <div class="upload-field">
+            <input type="file" name="uploadImg" id="uploadImg" />
+          </div>
+        </div>
+        <div class="comment-container">
+          <div class="heading">Comments</div>
+          <div class="comment-field clr-col-md-12 clr-col-lg-8">
+            <textarea name="comment" id="commentField" cols="25" rows="4" placeholder="Please add a comment here..."></textarea>
+          </div>
+
+        </div>
+        <div class="submit-btn clr-col-lg-8 clr-col-md-12">
+            <button class="btn btn-primary" (click)="createTicket()">Submit</button>
+        </div>
+      </div>
+
+
+      <div class="loader-container" *ngIf="showLoader">
+        <div class="loader">
+          <span class="spinner spinner-md">
+        </span>
+        <span>Loading...</span>
+        </div>
+      </div>
+     

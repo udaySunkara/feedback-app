@@ -1,0 +1,29 @@
+{
+  "assetID": "1",
+  "assetType": "PRINTER",
+  "location": {
+    "buildingDesc": "CreekSide C",
+    "floor": 2
+  },
+  "assetIssues": [{
+    "id": 16,
+    "assetCode": "PRINTER",
+    "issueCode": "1",
+    "issueDescription": "Out of Ink"
+  }, {
+    "id": 19,
+    "assetCode": "PRINTER",
+    "issueCode": "2",
+    "issueDescription": "Badge scanner issue"
+  }, {
+    "id": 22,
+    "assetCode": "PRINTER",
+    "issueCode": "3",
+    "issueDescription": "Paper Jam"
+  }, {
+    "id": 25,
+    "assetCode": "PRINTER",
+    "issueCode": "4",
+    "issueDescription": "No power"
+  }]
+}
