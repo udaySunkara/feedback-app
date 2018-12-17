@@ -11,7 +11,7 @@ import { SharedServiceService } from '../services/shared-service.service';
 export class FeedbackSubmitStatusComponent implements OnInit, OnDestroy {
 
   constructor(private route: ActivatedRoute, private sharedService: SharedServiceService) { }
-  ticketDetails = {};
+  ticketDetails = null;
   ngOnInit() {
 
 
